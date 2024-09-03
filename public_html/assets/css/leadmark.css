@@ -12259,3 +12259,88 @@ textarea.form-control {
   opacity: 1;
   visibility: visible;
 }
+
+/*HECHO POR MI AGREGADO*/
+
+.section {
+  padding: 60px 0;
+  position: relative;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+
+  z-index: -1;
+}
+
+/* Text Styling */
+.section-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.section-subtitle {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.checklist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 30px; /* Ajusta el espacio según el tamaño de tu imagen */
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #555;
+}
+
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* Ajusta el tamaño según el tamaño de tu imagen */
+  height: 20px; /* Ajusta el tamaño según el tamaño de tu imagen */
+  background: url("../imgs/check.png") no-repeat center center;
+  background-size: contain;
+}
+.years-text {
+  font-size: 8rem;
+  color: #4b0082; /* Un color que resalta sobre el fondo */
+  font-weight: 800;
+  text-shadow: 1px 1px 2px #ffffff,
+    /* Primer capa de sombra */ 6px 6px 6px #ffffff; /* Segunda capa de sombra para el efecto de profundidad */
+}
+
+.years-label {
+  font-size: 4rem;
+  color: #4b0082;
+  font-weight: 1000;
+  margin-top: 10px;
+  text-shadow: 1px 1px 2px #ffffff,
+    /* Primer capa de sombra */ 6px 6px 6px #ffffff; /* Segunda capa de sombra para el efecto de profundidad */
+}
+
+/* Image Styling */
+.shadow-sm {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Suaviza la sombra */
+  transition: transform 0.3s ease-in-out;
+}
+
+.shadow-sm:hover {
+  transform: scale(1.05); /* Efecto de ampliación al pasar el mouse */
+}
