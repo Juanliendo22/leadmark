@@ -722,10 +722,16 @@ pre code {
 .col-xl-12,
 .col-xl,
 .col-xl-auto {
+  display: flex;
+  padding-right: 3rem !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  padding-bottom: 15px;
 }
 
 .col {
@@ -1018,6 +1024,7 @@ pre code {
     -ms-flex: 0 0 8.33333%;
     flex: 0 0 8.33333%;
     max-width: 8.33333%;
+    border-radius: 20px;
   }
   .col-sm-2 {
     -webkit-box-flex: 0;
@@ -8005,6 +8012,7 @@ button.bg-dark:focus {
   -webkit-flex-direction: row !important;
   -ms-flex-direction: row !important;
   flex-direction: row !important;
+  padding-top: 50px;
 }
 
 .flex-column {
@@ -8104,6 +8112,8 @@ button.bg-dark:focus {
 }
 
 .justify-content-between {
+  padding-top: 50px;
+
   -webkit-box-pack: justify !important;
   -webkit-justify-content: space-between !important;
   -ms-flex-pack: justify !important;
@@ -10014,6 +10024,7 @@ button.bg-dark:focus {
   .mb-md-0,
   .my-md-0 {
     margin-bottom: 0 !important;
+    border-radius: 20px;
   }
   .ml-md-0,
   .mx-md-0 {
@@ -10218,6 +10229,11 @@ button.bg-dark:focus {
   }
   .pr-md-5,
   .px-md-5 {
+    display: flex;
+    padding-right: 3rem !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-right: 3rem !important;
   }
   .pb-md-5,
@@ -11467,6 +11483,8 @@ hr {
 }
 
 .btn.rounded {
+  margin-top: 50px;
+
   border-radius: 50px !important;
 }
 
@@ -12049,10 +12067,6 @@ textarea.form-control {
   }
 }
 
-.section {
-  padding: 80px 0;
-}
-
 .section:nth-child(even) {
   background: #f5f8fc;
 }
@@ -12263,7 +12277,7 @@ textarea.form-control {
 /*HECHO POR MI AGREGADO*/
 
 .section {
-  padding: 60px 0;
+  margin-bottom: 60px;
   position: relative;
 }
 
@@ -12273,14 +12287,15 @@ textarea.form-control {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #121212;
-
+  background: url(../imgs/bg.jpg) no-repeat center top fixed;
+  background-size: cover;
   z-index: -1;
+  filter: blur(1px); /* Ajusta el valor del desenfoque según tus necesidades */
 }
 
 /* Text Styling */
 .section-title {
-  color: #ffffff;
+  color: black;
   font-size: 2.5rem;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -12295,16 +12310,21 @@ textarea.form-control {
 }
 
 .checklist {
-  list-style-type: none;
+  list-style: none; /* Elimina los puntos de lista por defecto */
   padding: 0;
+  margin: 0;
+  text-align: center; /* Centra los elementos de la lista horizontalmente */
 }
 
 .checklist li {
+  display: flex;
+  align-items: start;
+  justify-content: start;
   position: relative;
   padding-left: 30px; /* Ajusta el espacio según el tamaño de tu imagen */
-  margin-bottom: 10px;
   font-size: 1em;
-  color: #555;
+  text-align: center;
+  color: #d1cfcf; /* El color de texto ajustado */
 }
 
 .checklist li::before {
@@ -12312,12 +12332,13 @@ textarea.form-control {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); /* Centra verticalmente la imagen */
   width: 20px; /* Ajusta el tamaño según el tamaño de tu imagen */
   height: 20px; /* Ajusta el tamaño según el tamaño de tu imagen */
   background: url("../imgs/check.png") no-repeat center center;
   background-size: contain;
 }
+
 .years-text {
   font-size: 8rem;
   color: #4b0082; /* Un color que resalta sobre el fondo */
@@ -12338,9 +12359,95 @@ textarea.form-control {
 /* Image Styling */
 .shadow-sm {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Suaviza la sombra */
-  transition: transform 0.3s ease-in-out;
 }
 
-.shadow-sm:hover {
-  transform: scale(1.05); /* Efecto de ampliación al pasar el mouse */
+.WHYIMAGE {
+  display: block;
+  width: 100%;
+  height: auto;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.FaQSection {
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.FaQSection h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #121212;
+  font-weight: 500;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.faq-item:hover {
+  background-color: #f0f0f0;
+}
+
+.faq-item h3 {
+  font-size: 20px;
+  color: var(--gray-dark);
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item h3:after {
+  content: "\25B6"; /* Right arrow icon */
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active h3:after {
+  transform: rotate(90deg); /* Rotate to point down */
+}
+
+.faq-item p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.faq-item.active p {
+  max-height: 500px; /* large enough to show all text */
+  opacity: 1;
+}
+
+.faq-item a {
+  color: var(--gray-dark);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.faq-item a:hover {
+  text-decoration: underline;
 }
