@@ -79,7 +79,9 @@ body {
   line-height: 1.5;
   color: #444;
   text-align: left;
-  background-color: #fff;
+  position: relative;
+  background: url(../imgs/bg.jpg) no-repeat center top fixed;
+  background-size: cover;
 }
 
 [tabindex="-1"]:focus {
