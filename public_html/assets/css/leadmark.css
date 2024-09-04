@@ -628,17 +628,59 @@ pre code {
 }
 
 .row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
   justify-content: center;
   align-items: center;
+}
+
+.col-md-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+/* Aplicar el delay para cada card */
+.col-md-4:nth-child(1) .card {
+  animation-delay: 0.5s;
+}
+
+.col-md-4:nth-child(2) .card {
+  animation-delay: 1s;
+}
+
+.col-md-4:nth-child(3) .card {
+  animation-delay: 1.5s;
+}
+
+.col-md-4:nth-child(4) .card {
+  animation-delay: 2s;
+}
+
+.col-md-4:nth-child(5) .card {
+  animation-delay: 2.5s;
+}
+
+.col-md-4:nth-child(6) .card {
+  animation-delay: 3s;
+}
+
+.col-md-4:nth-child(7) .card {
+  animation-delay: 3.5s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .no-gutters {
@@ -12450,4 +12492,18 @@ textarea.form-control {
 
 .faq-item a:hover {
   text-decoration: underline;
+}
+.rating {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.star {
+  color: #ffd700; /* Color dorado para las estrellas llenas */
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+.star:last-child {
+  margin-right: 0;
 }
