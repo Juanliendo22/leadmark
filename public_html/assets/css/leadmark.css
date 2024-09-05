@@ -12017,8 +12017,8 @@ textarea.form-control {
   background: #ffbca8;
 }
 .why-website-section {
-  padding: 60px 20px;
-  background-color: #f8f9fa;
+  padding: 60px 20px 100px; /* Incrementa padding-bottom */
+  background-color: white;
 }
 
 .content-wrapper {
@@ -12640,17 +12640,26 @@ textarea.form-control {
 /* Estilo para la Sección de Atención */
 .attention-section,
 .strategy-section {
-  padding: 80px 20px;
-  background-color: rgba(18, 18, 18, 0.3); /* Fondo con opacidad */
+  padding: 40px 20px;
+  margin-top: 100px;
+  background-color: #4a4e69;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease-in-out;
+  position: relative;
   margin-bottom: 40px;
+  box-shadow: 0 20px 40px rgb(0 0 0);
 }
 
-.attention-section:hover,
-.strategy-section:hover {
-  transform: translateY(-10px);
+.attention-section::before,
+.strategy-section::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #6b6b6b; /* Fondo del "doble fondo" */
+  z-index: -1;
 }
 
 .attention-section h2,
@@ -12689,7 +12698,6 @@ textarea.form-control {
   padding: 60px 20px;
   background-color: rgba(18, 18, 18, 0.3); /* Fondo con opacidad */
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .feature-row {
@@ -12699,7 +12707,7 @@ textarea.form-control {
 }
 
 .feature-box {
-  background-color: rgba(18, 18, 18, 0.3); /* Fondo con opacidad */
+  background-color: #121212; /* Fondo con opacidad */
   padding: 30px;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
@@ -12972,4 +12980,62 @@ textarea.form-control {
     font-size: 0.875rem;
     padding: 0 10px;
   }
+}
+
+.containerBlog {
+  width: 100%;
+  margin-top: 100px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+  border-radius: 20px;
+}
+
+@media (min-width: 576px) {
+  .containerBlog {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .containerBlog {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .containerBlog {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .containerBlog {
+    max-width: 1140px;
+  }
+}
+.card-collapsible {
+  cursor: pointer;
+  overflow: hidden; /* Asegura que el contenido no se desborde durante la transición */
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.collapsible-content {
+  max-height: 0; /* Inicia con la altura máxima en 0 para estar oculto */
+  overflow: hidden; /* Asegura que el contenido no se desborde durante la transición */
+  padding: 0 15px; /* Añade padding en los laterales */
+  color: #333;
+  transition: max-height 0.4s ease, padding 0.4s ease; /* Agrega transición suave */
+}
+
+.card-collapsible.active .collapsible-content {
+  max-height: 1000px; /* Ajusta este valor según el contenido máximo esperado */
+  padding: 15px; /* Restablece el padding cuando el contenido está visible */
 }

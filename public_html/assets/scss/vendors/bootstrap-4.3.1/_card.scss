@@ -31,12 +31,29 @@
   }
 }
 
+.card {
+  /* Establece un ancho fijo para las cartas */
+  width: 100%;
+  max-width: 350px; /* Puedes ajustar el ancho máximo según sea necesario */
+  /* Establece una altura fija para las cartas */
+  height: 450px; /* Ajusta la altura según tus necesidades */
+  /* Para asegurar que el contenido se ajuste correctamente */
+  display: flex;
+  flex-direction: column;
+}
+
 .card-body {
-  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
-  // as much space as possible, ensuring footers are aligned to the bottom.
-  flex: 1 1 auto;
-  padding: $card-spacer-x;
-  color: $card-color;
+  /* Asegura que el contenido ocupe el espacio disponible */
+  flex: 1;
+  padding: 20px; /* Puedes ajustar el padding según tus preferencias */
+  color: #333; /* Ajusta el color del texto según el diseño */
+}
+
+/* Si quieres que todas las cartas tengan la misma apariencia, también puedes ajustar los estilos de imagen */
+.card-img-top {
+  width: 100%;
+  height: 200px; /* Ajusta la altura de la imagen según el diseño */
+  object-fit: cover; /* Para que la imagen se recorte adecuadamente y se ajuste al tamaño */
 }
 
 .card-title {
