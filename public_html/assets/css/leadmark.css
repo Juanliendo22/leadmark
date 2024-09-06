@@ -12739,24 +12739,27 @@ textarea.form-control {
   font-size: 50px;
   color: #ffc107;
   margin-bottom: 20px;
-}
+} /* Estilo general para la sección */
 .small-section {
   padding: 50px 0;
   background-color: rgba(18, 18, 18, 0.3); /* 50% de opacidad */
 }
 
+/* Títulos */
 .small-section h2 {
   color: #121212;
   margin-bottom: 30px;
   font-size: 24px;
 }
 
+/* Grupo de botones */
 .button-group {
   display: flex;
   justify-content: center;
   gap: 20px; /* Espacio entre botones */
 }
 
+/* Botón personalizado */
 .btn-custom {
   border: 2px solid #ffc107;
   background-color: #121212;
@@ -12767,10 +12770,79 @@ textarea.form-control {
   text-transform: uppercase;
 }
 
+/* Efecto hover en los botones */
 .btn-custom:hover {
   background-color: #ffc107;
   color: #121212;
-} /* General Styles */
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+  .small-section {
+    padding: 30px 0;
+  }
+
+  .small-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .button-group {
+    flex-direction: column; /* Botones en columna */
+    align-items: center; /* Alinear botones al centro */
+    gap: 10px; /* Reducir el espacio entre botones */
+  }
+
+  .btn-custom {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Pantallas medianas (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .small-section {
+    padding: 40px 0;
+  }
+
+  .small-section h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .button-group {
+    gap: 15px; /* Reducir el espacio entre botones */
+  }
+
+  .btn-custom {
+    padding: 9px 18px;
+    font-size: 16px;
+  }
+}
+
+/* Pantallas grandes (escritorios) */
+@media (min-width: 769px) {
+  .small-section {
+    padding: 50px 0;
+  }
+
+  .small-section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .button-group {
+    gap: 20px; /* Espacio entre botones */
+  }
+
+  .btn-custom {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+}
+/* General Styles */
 .historia-seccion {
   padding: 60px 0;
 }
@@ -13104,4 +13176,102 @@ p {
 .btn-custom:hover {
   background-color: #ffaa00;
   color: #fff;
+}
+
+/* Estilos actualizados para coincidir con el tema violeta */
+.whatsapp-section {
+  color: white;
+  padding: 60px 0;
+  position: relative;
+}
+
+.whatsapp-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Texto con sombra */
+}
+
+.whatsapp-section p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #f1f1f1;
+}
+
+/* Botón ajustado a los colores del sitio */
+.whatsapp-btn {
+  font-size: 1.25rem;
+  padding: 10px 30px;
+  background-color: #ff6f61; /* Color cálido que contrasta con el violeta */
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Imagen con desvanecimiento abajo */
+.whatsapp-img-wrapper {
+  position: relative;
+}
+
+.whatsapp-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Efecto desvanecido */
+.whatsapp-img-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Ajusta la altura del desvanecido */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: linear-gradient(
+    transparent,
+    #5a189a
+  ); /* Desvanecido desde transparente a violeta */
+}
+
+/* Para asegurar que las columnas se alineen correctamente */
+.row.align-items-center {
+  align-items: center;
+}
+
+/* Fondo con degradado suave para coincidir con el esquema visual */
+.whatsapp-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at top left,
+    rgba(0, 0, 0, 0.2),
+    transparent
+  );
+  z-index: 1;
+}
+
+/* Ajustes de z-index para superponer correctamente */
+.whatsapp-section .container {
+  position: relative;
+  z-index: 2;
 }
