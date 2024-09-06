@@ -1321,7 +1321,14 @@ pre code {
     -ms-flex: 0 0 33.33333%;
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
+    border: 2px solid transparent; /* Establece un borde inicial transparente */
+    transition: transform 0.3s ease; /* Transiciones suaves */
   }
+
+  .col-md-4:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al hacer hover */
+  }
+
   .col-md-5 {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 41.66667%;
@@ -11953,7 +11960,7 @@ textarea.form-control {
 }
 
 .header .shape svg path {
-  fill: #fff;
+  fill: #d2d1d1;
 }
 
 @media (max-width: 1199.98px) {
@@ -12018,7 +12025,7 @@ textarea.form-control {
 }
 .why-website-section {
   padding: 60px 20px 100px; /* Incrementa padding-bottom */
-  background-color: white;
+  background-color: #d2d1d1;
 }
 
 .content-wrapper {
@@ -12642,7 +12649,7 @@ textarea.form-control {
 .strategy-section {
   padding: 40px 20px;
   margin-top: 100px;
-  background-color: #4a4e69;
+  background-color: #540d6e;
   border-radius: 10px;
   position: relative;
   margin-bottom: 40px;
@@ -12654,7 +12661,7 @@ textarea.form-control {
   content: "";
   position: absolute;
   bottom: -15px;
-  right: -15px;
+  right: -10px;
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -13038,4 +13045,63 @@ textarea.form-control {
 .card-collapsible.active .collapsible-content {
   max-height: 1000px; /* Ajusta este valor según el contenido máximo esperado */
   padding: 15px; /* Restablece el padding cuando el contenido está visible */
+}
+
+.section-header {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #540d6e;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.decorative-arrow {
+  width: 80px; /* Tamaño más grande para más visibilidad */
+  height: auto;
+  margin-right: 20px;
+}
+
+.text-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn-containerEstrategias {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-custom {
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  background-color: #ffcc00;
+  border-color: #ffcc00;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #ffaa00;
+  color: #fff;
 }
