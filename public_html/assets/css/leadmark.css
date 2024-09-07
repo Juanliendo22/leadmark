@@ -12153,6 +12153,7 @@ textarea.form-control {
   font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
   padding-bottom: 7px;
   font-weight: 600;
+  font-style: italic;
 }
 
 .section .components-section-title {
@@ -12665,7 +12666,7 @@ textarea.form-control {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background-color: #6b6b6b; /* Fondo del "doble fondo" */
+  background-color: #121212; /* Fondo del "doble fondo" */
   z-index: -1;
 }
 
@@ -13122,7 +13123,7 @@ textarea.form-control {
 .section-header {
   text-align: center;
   padding: 50px 20px;
-  background-color: #540d6e;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -13283,4 +13284,21 @@ p {
 .whatsapp-section .container {
   position: relative;
   z-index: 2;
+}
+
+/*Animacion de scroll page*/
+
+/* Configuración inicial, los elementos son invisibles */
+.fade-in {
+  opacity: 0;
+  transform: translateY(
+    100px
+  ); /* Aumentamos el desplazamiento inicial para hacerlo más notorio */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Hacemos la animación más larga */
+}
+
+/* Elemento visible cuando entra en la vista */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0); /* Regresa a su posición original */
 }
