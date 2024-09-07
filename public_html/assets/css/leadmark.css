@@ -13302,3 +13302,21 @@ p {
   opacity: 1;
   transform: translateY(0); /* Regresa a su posición original */
 }
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icon {
+  color: #ffffff; /* Color de los íconos */
+  margin: 0 10px;
+  font-size: 24px; /* Tamaño de los íconos */
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #e01010; /* Color al pasar el cursor */
+}
+
+.social-icon i {
+  display: inline-block;
+}
