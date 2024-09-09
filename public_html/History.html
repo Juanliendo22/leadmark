@@ -17,6 +17,11 @@
       rel="stylesheet"
       href="assets/vendors/themify-icons/css/themify-icons.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
     <!-- Bootstrap + LeadMark main styles -->
     <link rel="stylesheet" href="assets/css/leadmark.css" />
     <link rel="icon" type="image/png" href="./assets/imgs/Logo.png" />
@@ -72,31 +77,32 @@
       </div>
     </nav>
     <!-- End Of Second Navigation -->
-
     <section class="historia-seccion">
       <div class="container">
-        <h2 class="historia-titulo text-center">Nuestra Historia</h2>
+        <h2 class="historia-titulo text-center" style="color: white">
+          Nuestra Historia
+        </h2>
         <div class="row">
           <div class="col-lg-6 offset-lg-3">
             <div class="historia-timeline">
               <div class="historia-timeline-item">
                 <div class="historia-timeline-img">
-                  <img
-                    src="./assets/imgs/señala.png"
-                    alt="Hace 4 Años: El Comienzo"
-                  />
+                  <i
+                    class="fas fa-calendar-day fa-2x"
+                    style="color: orangered"
+                  ></i>
                 </div>
                 <div class="historia-timeline-content">
-                  <h3>Hace 4 Años: El Comienzo</h3>
+                  <h3 style="color: white">Hace 4 Años: El Comienzo</h3>
                   <div class="historia-contenido">
-                    <p>
+                    <p style="color: white">
                       Hace cuatro años, comenzamos a emprender un viaje en el
                       mundo de las paginas web. Con una pasión inquebrantable y
                       un compromiso con la excelencia, fundamos la empresa para
                       ofrecer soluciones innovadoras que realmente marcan la
                       diferencia.
                     </p>
-                    <p>
+                    <p style="color: white">
                       Nuestro primer proyecto fue un desafío emocionante que nos
                       permitió establecer una base sólida en el mercado. Desde
                       entonces, hemos crecido y evolucionado, aprendiendo de
@@ -108,15 +114,15 @@
               </div>
               <div class="historia-timeline-item mt-5">
                 <div class="historia-timeline-img">
-                  <img
-                    src="./assets/imgs/compromiso.png"
-                    alt="Nuestro Compromiso"
-                  />
+                  <i
+                    class="fas fa-handshake fa-2x"
+                    style="color: orangered"
+                  ></i>
                 </div>
                 <div class="historia-timeline-content">
-                  <h3>Nuestro Compromiso</h3>
+                  <h3 style="color: white">Nuestro Compromiso</h3>
                   <div class="historia-contenido">
-                    <p>
+                    <p style="color: white">
                       Hoy en día, seguimos comprometidos con nuestra misión de
                       ofrecer productos y servicios que no solo cumplen, sino
                       que superan las expectativas de nuestros clientes. Nuestro
@@ -124,7 +130,7 @@
                       trabaja incansablemente para garantizar que cada proyecto
                       se ejecute con la máxima calidad y precisión.
                     </p>
-                    <p>
+                    <p style="color: white">
                       Estamos orgullosos de nuestra trayectoria y del impacto
                       positivo que hemos tenido en la industra. Pero lo que más
                       nos motiva es la oportunidad de seguir innovando y
@@ -136,15 +142,12 @@
               </div>
               <div class="historia-timeline-item mt-5">
                 <div class="historia-timeline-img">
-                  <img
-                    src="./assets/imgs/nave.png"
-                    alt="Mirando hacia el Futuro"
-                  />
+                  <i class="fas fa-rocket fa-2x" style="color: orangered"></i>
                 </div>
                 <div class="historia-timeline-content">
-                  <h3>Mirando hacia el Futuro</h3>
+                  <h3 style="color: white">Mirando hacia el Futuro</h3>
                   <div class="historia-contenido">
-                    <p>
+                    <p style="color: white">
                       A medida que avanzamos, nos mantenemos enfocados en
                       nuestra visión de ser los que hacen los sueños de la
                       gente, realidad con nuestras paginas web personalizadas.
@@ -152,7 +155,7 @@
                       el desarrollo de talento para mantenernos a la vanguardia
                       de nuestra industria.
                     </p>
-                    <p>
+                    <p style="color: white">
                       Gracias a nuestros clientes, socios y al dedicado equipo
                       que forma parte de esta gran familia, estamos seguros de
                       que el mejor está por venir. ¡Acompáñanos en este
@@ -165,44 +168,70 @@
           </div>
         </div>
       </div>
-      <!-- Team Section -->
-      <section class="team-section">
-        <div class="container">
-          <h6 class="section-title mb-0 text-center" style="color: azure">
-            Nuestro equipo
-          </h6>
-          <div class="row">
-            <!-- Card 1 -->
-            <div class="col-md-6 mb-4">
-              <div class="card team-card">
-                <img
-                  src="./assets/imgs/MateoFer.png"
-                  class="card-img-top"
-                  alt="Miembro del equipo"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Mateo Fer</h5>
-                  <h6 class="card-subtitle mb-2">Ceo/Developer</h6>
-                </div>
-              </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col-md-6 mb-4">
-              <div class="card team-card">
-                <img
-                  src="./assets/imgs/juanLiendo.jpg"
-                  class="card-img-top"
-                  alt="Miembro del equipo"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Juan Liendo</h5>
-                  <h6 class="card-subtitle mb-2">Frontend Developer</h6>
-                </div>
-              </div>
-            </div>
+    </section>
+    <section id="team" class="team-section">
+      <h2>Conoce a nuestro equipo</h2>
+
+      <div class="team-container">
+        <div class="team-member">
+          <img
+            src="/public_html/assets/imgs/MateoFer.png"
+            alt="Fer Mateo"
+            class="team-photo"
+          />
+          <h3>Fer Mateo</h3>
+          <p>
+            <i class="fa-solid fa-crown" style="color: orange"></i>
+            Ceo/Developer
+          </p>
+          <p>
+            <i class="fa-solid fa-briefcase" style="color: orange"></i> Creador
+            de la marca y líder del equipo. Fer combina habilidades de
+            desarrollo con visión estratégica para guiar el rumbo de nuestra
+            empresa.
+          </p>
+          <div class="team-contact">
+            <a href="mailto:fer.mateo@example.com"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+            <a href="https://linkedin.com/in/fermateo" target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://twitter.com/fermateo" target="_blank"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
           </div>
         </div>
-      </section>
+        <div class="team-member">
+          <img
+            src="/public_html/assets/imgs/juanLiendo.jpg"
+            alt="Juan Liendo"
+            class="team-photo"
+          />
+          <h3>Juan Liendo</h3>
+          <p>
+            <i class="fa-solid fa-code" style="color: orange"></i> Frontend
+            Developer
+          </p>
+          <p>
+            <i class="fa-solid fa-laptop-code" style="color: orange"></i>
+            Programador web especializado en el desarrollo de interfaces de
+            usuario. Juan se encarga de crear experiencias web interactivas y
+            funcionales.
+          </p>
+          <div class="team-contact">
+            <a href="mailto:juan.liendo@example.com"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+            <a href="https://linkedin.com/in/juanliendo" target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://twitter.com/juanliendo" target="_blank"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="valores-mision-seccion">
@@ -215,11 +244,9 @@
             <em
               >satisfaser las necesidades de los que confian en nuestro
               servicio</em
-            >, y estamos comprometidos con <strong>lograrlo</strong>.
-            <span class="highlight"
-              >Creemos en que nuestros trabajos, estan diseñados, no para
-              cumplir espectativas, PARA SUPERARLAS.</span
-            >.
+            >, y estamos comprometidos con <strong>lograrlo</strong>. Creemos en
+            que nuestros trabajos, estan diseñados, no para cumplir
+            espectativas, PARA SUPERARLAS. >.
           </p>
           <ul class="valores-lista">
             <li>
@@ -240,121 +267,6 @@
             </li>
           </ul>
         </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="cta-section">
-      <h1>¿Estás listo para que trabajemos juntos?</h1>
-      <p>¡Estamos emocionados de empezar este proyecto contigo!</p>
-      <a href="#" class="btn">Contáctanos</a>
-    </section>
-
-    <section id="contact" class="section has-img-bg pb-0">
-      <div class="container">
-        <div class="container">
-          <h6 class="section-title text-center" style="color: white">
-            Nuestra Ubicación
-          </h6>
-          <h6 class="section-subtitle mb-5 text-center">
-            Encuentra nuestra oficina en el mapa
-          </h6>
-
-          <div class="row">
-            <div class="col-md-6">
-              <div class="map-container">
-                <!-- Asegúrate de reemplazar el src con la URL de tu mapa o iframe adecuado -->
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d54482.2848019491!2d-64.22360991219306!3d-31.41019147433342!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a3e0bcb782a1%3A0xf3c35579d83685ad!2sMateo%20Estudio%20-%20P%C3%A1ginas%20Web!5e0!3m2!1ses!2sar!4v1725456542485!5m2!1ses!2sar"
-                  width="600"
-                  height="450"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row align-items-center">
-          <div class="col-md-5 my-3">
-            <h6 class="mb-0">Telefono</h6>
-            <p class="mb-4">+54 9 3517653221</p>
-
-            <h6 class="mb-0">Direccion</h6>
-            <p class="mb-4">
-              Pedro Goyena 11157 Bº San Rafael Cordoba,Argentina
-            </p>
-
-            <h6 class="mb-0">Email</h6>
-            <p class="mb-0">info@website.com</p>
-            <p></p>
-          </div>
-          <div class="col-md-7">
-            <form>
-              <h4 class="mb-4">Drop Us A Line</h4>
-              <div class="form-row">
-                <div class="form-group col-sm-4">
-                  <input
-                    type="text"
-                    class="form-control text-white rounded-0 bg-transparent"
-                    name="name"
-                    placeholder="Name"
-                  />
-                </div>
-                <div class="form-group col-sm-4">
-                  <input
-                    type="email"
-                    class="form-control text-white rounded-0 bg-transparent"
-                    name="Email"
-                    placeholder="Email"
-                  />
-                </div>
-                <div class="form-group col-sm-4">
-                  <input
-                    type="text"
-                    class="form-control text-white rounded-0 bg-transparent"
-                    name="subject"
-                    placeholder="Subject"
-                  />
-                </div>
-                <div class="form-group col-12">
-                  <textarea
-                    name="message"
-                    id=""
-                    cols="30"
-                    rows="4"
-                    class="form-control text-white rounded-0 bg-transparent"
-                    placeholder="Message"
-                  ></textarea>
-                </div>
-                <div class="form-group col-12 mb-0">
-                  <button
-                    type="submit"
-                    class="btn btn-primary rounded w-md mt-3"
-                  >
-                    Send
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <!-- Page Footer -->
-        <footer class="mt-5 py-4 border-top border-secondary">
-          <p class="mb-0 small">
-            &copy;
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            , Mateo Estudio Created By
-            <a href="https://www.devcrud.com" target="_blank">Mateo Estudio.</a>
-            All rights reserved
-          </p>
-        </footer>
-        <!-- End of Page Footer -->
       </div>
     </section>
 
