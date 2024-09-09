@@ -4993,19 +4993,36 @@ input[type="button"].btn-block {
   -ms-flex-align: center;
   align-items: center;
 }
-
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.1rem;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Fondo semitransparente para un toque elegante */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Borde blanco semitransparente */
+  border-radius: 0.25rem; /* Aumenté el radio para una apariencia más suave */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Transición suave al hacer hover */
 }
 
 .navbar-toggler:hover,
 .navbar-toggler:focus {
   text-decoration: none;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Fondo más claro al hacer hover */
+  border-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Borde más definido al hacer hover */
 }
 
 .navbar-toggler-icon {
@@ -5014,8 +5031,10 @@ input[type="button"].btn-block {
   height: 1.5em;
   vertical-align: middle;
   content: "";
-  background: no-repeat center center;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMTAgNiI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjIiIHJ4PSIxIiBmaWxsPSJ3aGl0ZSIvPjxyZWN0IHk9IjQiIHdpZHRoPSIxMCIgaGVpZ2h0PSIyIiByeD0iMSIgZmlsbD0id2hpdGUiLz48L3N2Zz4=")
+    no-repeat center center; /* Icono de hamburguesa en blanco */
   background-size: 100% 100%;
+  filter: brightness(0) invert(1); /* Para asegurarnos de que el ícono sea blanco en fondos oscuros */
 }
 
 @media (max-width: 575.98px) {
@@ -9397,6 +9416,7 @@ button.bg-dark:focus {
 .my-4 {
   margin-bottom: 1.5rem !important;
   margin-top: 1.5rem !important;
+  border-radius: 10px;
 }
 
 .ml-4,
@@ -11684,6 +11704,11 @@ textarea.form-control {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+@media (max-width: 767px) {
+  .navbar.custom-navbar {
+    background-color: #121212;
+  }
+}
 
 .navbar.custom-navbar .nav-link {
   color: #fff;
@@ -12704,7 +12729,6 @@ textarea.form-control {
 /* Estilo para la Sección de Características */
 .containerInfo {
   padding: 60px 20px;
-  background-color: rgba(18, 18, 18, 0.3); /* Fondo con opacidad */
   border-radius: 10px;
 }
 
@@ -12712,11 +12736,41 @@ textarea.form-control {
   display: flex;
   justify-content: space-around;
   gap: 20px;
+  padding: 20px; /* Añade algo de padding */
+  background-image: url("/public_html/assets/imgs/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  border-radius: 20px; /* Bordes redondeados para suavizar */
+
+  /* Añadimos desenfoque al fondo */
+  position: relative;
+  z-index: 1;
+}
+
+.feature-row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 18, 18, 0.5); /* Fondo #121212 semitransparente */
+  backdrop-filter: blur(2px); /* Aplicamos el desenfoque */
+  border-radius: 20px; /* Mantén el radio del borde */
+  z-index: -1; /* Envía el fondo desenfocado detrás del contenido */
+}
+
+@media (max-width: 992px) {
+  .feature-row {
+    flex-direction: column; /* Para pantallas más pequeñas, cambia a columna */
+    align-items: center; /* Alinea los elementos en el centro */
+    gap: 15px; /* Reduce el espacio entre los elementos */
+  }
 }
 
 .feature-box {
-  background-color: #121212; /* Fondo con opacidad */
-  padding: 30px;
+  background-color: white; /* Fondo con opacidad */
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
 }
@@ -12843,7 +12897,6 @@ textarea.form-control {
     font-size: 18px;
   }
 }
-/* General Styles */
 .historia-seccion {
   padding: 60px 0;
 }
@@ -12881,6 +12934,11 @@ textarea.form-control {
   width: 12px;
   border-radius: 50%;
   background: #007bff;
+}
+
+.historia-imagen img {
+  width: 100%;
+  height: auto;
 }
 
 .valores-mision-seccion {
@@ -13319,4 +13377,71 @@ p {
 
 .social-icon i {
   display: inline-block;
+}
+
+.card-body i {
+  color: orange; /* Cambia el color si lo necesitas */
+  font-size: 1.2em; /* Ajusta el tamaño del ícono */
+}
+
+.title-icon {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.containerInfo {
+  background-color: #333; /* Ajusta el color de fondo según tu diseño */
+  padding: 50px;
+}
+
+.roadmap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.roadmap-item {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.roadmap-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: calc(100% + 20px); /* Adjust according to the height of the items */
+  background-color: #ffffff;
+  transform: translateX(-50%);
+}
+
+.roadmap-icon {
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.roadmap-content {
+  flex: 1;
+}
+
+.roadmap-content h4 {
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.roadmap-content p {
+  margin: 0;
+  color: #ffffff;
 }
