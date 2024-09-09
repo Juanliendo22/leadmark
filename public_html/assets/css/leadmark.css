@@ -12451,100 +12451,113 @@ textarea.form-control {
     rgba(0, 0, 0, 0) 100%
   );
 }
-.FaQSection {
-  margin-top: 80px;
-  padding: 20px 40px;
-  background-color: #fafafa; /* Fondo más suave */
+.faqs-section {
+  padding: 50px;
+  width: 80%;
+  margin: 150px auto;
+  background-color: rgba(
+    249,
+    249,
+    249,
+    0.8
+  ); /* Fondo blanco con 80% de opacidad */
   border-radius: 12px;
-  max-width: 1000px; /* Ancho reducido para una mejor estética */
-  margin: 80px auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave */
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Usamos CSS Grid con columnas más pequeñas */
-.FaQSection .faq-items {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas */
-  gap: 30px; /* Espacio más amplio entre las columnas */
-}
-
-/* Título con una tipografía más ligera */
-.FaQSection h2 {
-  font-size: 24px; /* Tamaño de fuente reducido */
-  margin-bottom: 20px;
+.faqs-title {
   text-align: center;
+  font-size: 2rem;
   color: #333;
-  font-weight: 500; /* Ligero cambio en el peso de la fuente */
-  letter-spacing: 0.8px;
+  margin-bottom: 40px;
 }
 
-/* Estilos individuales de los items con más espacio */
-.faq-item {
-  padding: 20px;
-  cursor: pointer;
-  border-radius: 8px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra más sutil */
-  transition: background-color 0.3s ease, padding 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.faq-item:hover {
-  background-color: #f4f4f4;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-.faq-item h3 {
-  font-size: 16px;
-  color: #444; /* Color más suave */
-  margin: 0;
+.faq-filters {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 500;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
-.faq-item h3:after {
-  content: "\25B6"; /* Flecha */
-  font-size: 12px;
-  transition: transform 0.3s ease;
+.faq-filter-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.faq-item.active h3:after {
-  transform: rotate(90deg); /* Rotar la flecha hacia abajo */
+.faq-filter-btn:hover {
+  background-color: orangered;
 }
 
-.faq-item p {
-  font-size: 14px; /* Tamaño de texto más pequeño */
-  color: #666;
-  line-height: 1.6;
+.faq-filter-btn.active {
+  background-color: var(--orange);
+}
+
+.faq-container {
+  display: none;
+}
+
+.faq-container.active {
+  display: block;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.faq-answer {
+  padding: 10px;
+  background-color: #e9ecef;
+  border-radius: 8px;
   margin-top: 10px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
 }
 
-.faq-item.active p {
-  max-height: 500px; /* Tamaño suficiente para mostrar el contenido */
-  opacity: 1;
+.faq-answer p {
+  margin: 0;
 }
 
-.faq-item a {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: 500; /* Menos énfasis en el enlace */
-}
-
-.faq-item a:hover {
-  text-decoration: underline;
-}
-
-/* Responsividad para pantallas pequeñas */
+/* Estilos responsive */
 @media (max-width: 768px) {
-  .FaQSection .faq-items {
-    grid-template-columns: 1fr; /* En pantallas pequeñas, una columna */
+  .faq-filter-btn {
+    padding: 8px 15px;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .faqs-section {
+    padding: 20px;
+    margin: 50px auto;
+  }
+
+  .faq-filter-btn {
+    padding: 5px 10px;
+  }
+
+  .faq-question {
+    font-size: 0.9rem;
+  }
+
+  .faq-answer {
+    font-size: 0.8rem;
   }
 }
 
