@@ -13072,40 +13072,6 @@ textarea.form-control {
   }
 }
 
-.containerBlog {
-  width: 100%;
-  margin-top: 100px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: white;
-  border-radius: 20px;
-}
-
-@media (min-width: 576px) {
-  .containerBlog {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .containerBlog {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .containerBlog {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .containerBlog {
-    max-width: 1140px;
-  }
-}
 .card-collapsible {
   cursor: pointer;
   overflow: hidden; /* Asegura que el contenido no se desborde durante la transición */
@@ -13463,4 +13429,67 @@ p {
 .team-member p {
   font-size: 1rem;
   color: #666;
+}
+/* WhatsApp Floating Icon */
+.whatsapp-float {
+  position: fixed; /* Fixed position ensures it stays in place */
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  right: 20px; /* Distance from the right side of the viewport */
+  background-color: #25d366; /* WhatsApp green color */
+  color: white;
+  border-radius: 50%; /* Circular background */
+  padding: 15px; /* Space around the icon */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+  z-index: 9999; /* Ensure it's on top of other elements */
+  text-align: center; /* Center the icon inside the circle */
+  display: flex; /* Flexbox for centering content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.whatsapp-float i {
+  vertical-align: middle; /* Aligns icon vertically */
+  font-size: 24px; /* Adjust icon size as needed */
+}
+
+/* Tamaño de las cartas de testimonios */
+.testimonial-card {
+  width: 100%;
+  max-width: 350px; /* Ajusta según tus necesidades */
+  height: 100%;
+  max-height: 400px; /* Ajusta según tus necesidades */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.section {
+  margin-top: 150px;
+}
+
+.testimonial-card .card-body {
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /* Permite el scroll interno */
+}
+
+.testimonial-card img {
+  width: 60px; /* Ajusta el tamaño de la imagen */
+  height: 60px;
+  object-fit: cover;
+}
+
+.rating .star {
+  font-size: 1.2em;
+  color: gold;
+}
+
+.testimonial-content {
+  flex: 1;
+  overflow: auto; /* Permite el scroll interno en el contenido */
+}
+
+.sectionTestimonials {
+  display: block;
+  padding-bottom: 100px;
+  margin-top: 150px;
 }
