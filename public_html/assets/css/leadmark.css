@@ -11987,6 +11987,11 @@ textarea.form-control {
 .header .shape svg path {
   fill: #d2d1d1;
 }
+@media (max-width: 767px) {
+  .header .shape svg {
+    display: none;
+  }
+}
 
 @media (max-width: 1199.98px) {
   .header .shape svg {
@@ -12003,7 +12008,7 @@ textarea.form-control {
 .header.components-header {
   max-height: 450px !important;
   height: 450px;
-  dispaly: none;
+  display: none;
   background-position: center -140px;
 }
 
@@ -12375,6 +12380,7 @@ textarea.form-control {
   margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: bold;
+  padding-top: 10px;
 }
 
 .section-subtitle {
@@ -13492,4 +13498,14 @@ p {
   display: block;
   padding-bottom: 100px;
   margin-top: 150px;
+}
+.button-wrapper {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Opcional: centra verticalmente el contenido si el contenedor tiene altura definida */
+  height: 100%; /* Opcional: establece una altura para el contenedor si es necesario */
+}
+
+.btn-custom {
+  /* Puedes agregar estilos adicionales para tu botón aquí */
 }
